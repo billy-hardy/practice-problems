@@ -1,5 +1,7 @@
 import assert from 'assert';
+import '../../flatMap/index.mjs';
 import {Queue} from '../index.mjs';
+import {Queue as QueueByStack} from '../by-stack.mjs';
 
 const testCases = [{
     input: [1, 2, 3],
@@ -8,14 +10,19 @@ const testCases = [{
     input: [3, 6, 1, 0],
     expected: [3, 6, 1, 0],
 }]
-.map(({input, expected}) => {
-    const queue = new Queue();
-    input.forEach((val) => queue.enqueue(val));
-    return {
-        input: queue,
-        expected
-    };
-});
+    .flatMap(({input, expected}) => {
+        return [
+            new Queue(),
+            new QueueByStack()
+        ]
+            .map((queue) => {
+                input.forEach((val) => queue.enqueue(val));
+                return {
+                    input: queue,
+                    expected
+                };
+            });
+    });
 
 
 testCases

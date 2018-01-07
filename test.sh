@@ -5,3 +5,4 @@ node --experimental-modules to-base-string/test/index.mjs
 node --experimental-modules binary-search-tree/test/index.mjs
 node --experimental-modules queue/test/index.mjs
 node --experimental-modules stack/test/index.mjs
+node --experimental-modules add-to-number/test/index.mjs

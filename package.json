@@ -1,0 +1,11 @@
+{
+  "name": "interview-cake",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Billy Hardy <billy92@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.1.0"
+  }
+}

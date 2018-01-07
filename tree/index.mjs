@@ -1,9 +1,4 @@
-export class Node {
-    constructor(value) {
-        this.value = value;
-        this.children = [];
-    }
-}
+import {Node} from '../list/index.mjs';
 
 export class BinaryNode {
     constructor(value) {
